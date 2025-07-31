@@ -1,0 +1,42 @@
+[
+  {
+    "id": "human",
+    "name": "Human",
+    "image": "/CharacterIMGS/Human.png",
+    "hp": 100,
+    "atk": 20,
+    "def": 35,
+    "skill": " ATK/DEF/HP dan birini ixtiyoriy oshirish",
+    "description": "Insonlar muvozanatli jangchilar. O‘z skilli orqali 3 kuchdan birini oshirish imkoniga ega."
+  },
+  {
+    "id": "elf",
+    "name": "Elf",
+    "image": "/CharacterIMGS/Elf.png",
+    "hp": 110,
+    "atk": 15,
+    "def": 20,
+    "skill": " 3 katakni kesib- oldinga yoki ortga - o‘tish",
+    "description": "Elflar chaqqon, harakatdagi ustalar. Skill orqali tezlik bilan oldinga o‘tadi."
+  },
+  {
+    "id": "orc",
+    "name": "Orc",
+    "image": "/CharacterIMGS/Orc.png",
+    "hp": 120,
+    "atk": 25,
+    "def": 30,
+    "skill": "oldindagi-12 katakdan biriga sakrab utish !",
+    "description": "Orklar kuchli va sabrli jangchilar. Zarur holatda 12 tagacha katakdan biriga yuroladi !"
+  },
+  {
+    "id": "sotuvchi",
+    "name": "Sotuvchi",
+    "image": "/CharacterIMGS/Human.png",
+    "hp": 100,
+    "atk": 40,
+    "def": 20,
+    "skill": "sotuvchi uziga +60 tanga oladi",
+    "description": "Sotuvchilar uzlari uchun pulni topishlari mumkin"
+  }
+]

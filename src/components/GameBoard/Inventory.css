@@ -1,0 +1,92 @@
+.inventory {
+  top: 5px;
+  padding: 16px;
+  background-color: #1e1e2f;
+  color: white;
+  border-radius: 16px;
+  width: 600px;
+  max-width: 700px;
+  height: auto;
+  margin: auto;
+  position: absolute;
+  left: 30%;
+  z-index: 9999;
+  overflow-y: auto;
+  scrollbar-width: bold;
+  scrollbar-color: #888 transparent;
+}
+.Inventorymenu{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.exit-inventor{
+  padding: 10px 15px;
+  border-radius: 20px;
+  background-color: red;
+  outline: none;
+  color: white;
+  font-size: 20px;
+  border: none;
+}
+.inventory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 100px);
+  gap: 16px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.inventory-item {
+  background-color: #474770;
+  border: 3px solid #1e1e2f;
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.inventory-item.selected {
+  border: 2px solid gold;
+  background-color: rgba(255, 215, 0, 0.2);
+}
+.Item-images{
+  width: 50px;
+}
+
+@media (max-width:900px){
+  .inventory{
+    width: 700px;
+    left: 0px;
+    top: 0px;
+  }
+  .inventory-item{
+    width: 80px;
+    height: 80px;
+  }
+  .Item-images{
+    width: 30px;
+  }
+  .dice-input{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: end;
+    
+  }
+  .dice-input input{
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 20px 0px 0px 20px;
+  }
+  .dice-input button{
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+  }
+}

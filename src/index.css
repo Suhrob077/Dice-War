@@ -1,0 +1,8 @@
+button{
+    padding: 10px 5px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: black;
+    color: aliceblue;
+}

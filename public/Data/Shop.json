@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "name": "Shield",
+    "description": "Himoyani oshirish",
+    "price": 25,
+    "status": "+20 def",
+    "image": "/src/components/GameBoard/Icons/Shield.png"
+  },
+  {
+    "id": 2,
+    "name": "Sword",
+    "description": "hujumni oshirish.",
+    "price": 20,
+    "status": "+20 attak",
+    "image": "/src/components/GameBoard/Icons/sword.png"
+  },
+  {
+    "id": 3,
+    "name": "Olmos-Qilich",
+    "description": "Yuqori darajali hujum!",
+    "price": 150,
+    "status": "150 attak",
+    "image": "/src/components/GameBoard/Icons/Diamons-sword.png"
+  },
+  {
+    "id": 4,
+    "name": "Oltin-Qalqon",
+    "description": "Zarbalardan 1 marta himoya qiladi.",
+    "price": 100,
+    "status": "+120 def",
+    "image": "/src/components/GameBoard/Icons/gold-Shield.png"
+  },
+  {
+    "id": 5,
+    "name": "Tuzalish",
+    "description": "har bitta yurishda 5 HP tiklaydi.",
+    "price": 50,
+    "status": "+5 hp",
+    "image": "../shop-Icons/hp.png"
+  },
+  {
+    "id": 6,
+    "name": "Start-0",
+    "description": "Start holatiga qaytish, ! - Ixtiyoriy - !",
+    "price": 100,
+    "status": "start",
+    "image": "/src/components/GameBoard/Icons/Start.png"
+  },
+  {
+    "id": 7,
+    "name": "Gold Dice 🎲",
+    "description": "1 dan 6 gacha raqam tanlang va shuncha qadam oldinga yur!",
+    "price": 150,
+    "status": "move +[1-6]",
+    "image": "/src/components/GameBoard/Icons/gold-dice.png"
+  },
+  {
+    "id": 8,
+    "name": "Black Dice 🕳️",
+    "description": "1 dan 6 gacha raqam tanlang va shuncha qadam orqaga qayt!",
+    "price": 300,
+    "status": "move -[1-6]",
+    "image": "../shop-Icons/D-balck.png"
+  },
+  {
+    "id": 9,
+    "name": "Super Dice 1️⃣",
+    "description": "Darhol 1–20 oralig‘ida yurish!",
+    "price": 300,
+    "status": "move +[1-20]",
+    "image": "../shop-Icons/D20.png"
+  },
+  {
+    "id": 10,
+    "name": "Super Dice 2️⃣",
+    "description": "Darhol 1–35 oralig‘ida yurish!",
+    "price": 450,
+    "status": "move +[1-35]",
+    "image": "../shop-Icons/D35.png"
+  },
+  {
+    "id": 11,
+    "name": "Super Dice 3️⃣",
+    "description": "Darhol 1–50 oralig‘ida yurish!",
+    "price": 600,
+    "status": "move +[1-50]",
+    "image": "/public/shop-Icons/D50.png"
+  }
+]
