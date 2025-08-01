@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Shield",
     "description": "Himoyani oshirish",
-    "price": 25,
+    "price": 20,
     "status": "+20 def",
     "image": "../shop-Icons/Shop-Shield.png"
   },
@@ -19,7 +19,7 @@
     "id": 3,
     "name": "Olmos-Qilich",
     "description": "Yuqori darajali hujum!",
-    "price": 150,
+    "price": 130,
     "status": "150 attak",
     "image": "../shop-Icons/Diamons-sword.png"
   },
@@ -27,7 +27,7 @@
     "id": 4,
     "name": "Oltin-Qalqon",
     "description": "Zarbalardan 1 marta himoya qiladi.",
-    "price": 100,
+    "price": 110,
     "status": "+120 def",
     "image": "../shop-Icons/gold-Shield.png"
   },
@@ -43,7 +43,7 @@
     "id": 6,
     "name": "Start-0",
     "description": "Start holatiga qaytish, ! - Ixtiyoriy - !",
-    "price": 100,
+    "price": 50,
     "status": "start",
     "image": "../shop-Icons/Shop-Start.png"
   },
@@ -59,7 +59,7 @@
     "id": 8,
     "name": "Black Dice 🕳️",
     "description": "1 dan 6 gacha raqam tanlang va shuncha qadam orqaga qayt!",
-    "price": 300,
+    "price": 150,
     "status": "move -[1-6]",
     "image": "../shop-Icons/D-balck.png"
   },
@@ -67,7 +67,7 @@
     "id": 9,
     "name": "Super Dice 1️⃣",
     "description": "Darhol 1–20 oralig‘ida yurish!",
-    "price": 300,
+    "price": 250,
     "status": "move +[1-20]",
     "image": "../shop-Icons/D20.png"
   },
@@ -75,7 +75,7 @@
     "id": 10,
     "name": "Super Dice 2️⃣",
     "description": "Darhol 1–35 oralig‘ida yurish!",
-    "price": 450,
+    "price": 350,
     "status": "move +[1-35]",
     "image": "../shop-Icons/D35.png"
   },
@@ -83,7 +83,7 @@
     "id": 11,
     "name": "Super Dice 3️⃣",
     "description": "Darhol 1–50 oralig‘ida yurish!",
-    "price": 600,
+    "price": 400,
     "status": "move +[1-50]",
     "image": "../shop-Icons/D50.png"
   }

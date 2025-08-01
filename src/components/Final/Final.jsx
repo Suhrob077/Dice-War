@@ -29,7 +29,7 @@ const Final = () => {
   const [showSaveModal, setShowSaveModal] = useState(false);
 
   const diceImages = [null, dice1, dice2, dice3, dice4, dice5, dice6];
-  const dragonStats = { health: 300, attack: 300, defense: 300 };
+  const dragonStats = { health: 200, attack: 350, defense: 250 };
 
   useEffect(() => {
     if (!stats || !character) {

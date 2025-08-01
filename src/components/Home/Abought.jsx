@@ -82,13 +82,13 @@ const Abought = () => {
           <p>avval sotib olinganni ishlating so`ng yana sotib oling 🎁</p>
           <li>Zar natijalari tasodifiy hisoblanadi (randomize)</li>
           <li>Skil va itemlar balanslangan holda ishlab chiqilgan</li>
-          <li>Tuzalish Artifactini sotib olgandan sung ishlatmang ! (artifact (inventorda turgan vaqti) har yurganda +5 hp beradi .Uni ishlatish ham +5 hp beradi !)</li>
+          <li>Tuzalish Artifactini sotib olgandan sung ishlatmang ! (artifact (inventorda turgan vaqti) har yurganda +10 hp beradi .Ammo-uni ishlatish  +40 hp beradi !)</li>
         </ul>
         {/* <img src="/images/tips.png" alt="Tips" /> */}
       </section>
 
       <section>
-      <h2>Muuhum Eslatma ❗❗❗ </h2>
+      <h2>❗❗❗ Muuhum Eslatma ❗❗❗ </h2>
       <p>
         Shop orqali sotib olingan bir turdagi narsalar ni ishlatish bittasining statuslarini beradi !
       </p>
@@ -130,9 +130,15 @@ const Abought = () => {
         <h2>Ushbu yangilanishlar 2026(yil) - 09(oy) - 01(kun) qushiladi !</h2>
         {/* <img src="/images/update_roadmap.png" alt="Updates" /> */}
       </section>
+      <section>
+        <h2>9. Ajdar Statuslari❗</h2>
+        <li>Jon-200</li>
+        <li>Hujum-350</li>
+        <li>Himoya-250</li>
+      </section>
 
       <section>
-        <h2>9. Omad tilaymiz!</h2>
+        <h2>10. Omad tilaymiz!</h2>
         <p>O‘yinda omad yor bo‘lsin! Dice War olamiga hush kelibsiz!</p>
         {/* <img src="/images/goodluck.png" alt="Good luck" /> */}
       </section>

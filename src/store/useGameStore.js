@@ -67,7 +67,7 @@ export const useGameStore = create((set, get) => ({
     const newGoldDiceCooldown = Math.max(0, state.goldDiceCooldown - 1);
 
     if (state.inventory.find((item) => item.name === 'Tuzalish')) {
-      get().healPlayer(5);
+      get().healPlayer(10);
     }
 
     set({
@@ -146,7 +146,7 @@ export const useGameStore = create((set, get) => ({
     else if (itemName === 'Oltin-Qalqon') stats.defense += 120;
     else if (itemName === 'Sword') stats.attack += 20;
     else if (itemName === 'Olmos-Qilich') stats.attack += 150;
-    else if (itemName === 'Tuzalish') stats.health += 5;
+    else if (itemName === 'Tuzalish') stats.health += 40;
     else if (itemName === 'Start-0') set({ position: 0 });
     else if (itemName === 'Gold Dice') {
       if (state.goldDiceCooldown === 0) {
@@ -215,7 +215,7 @@ export const useGameStore = create((set, get) => ({
 
   dragonBattle: () => {
     const stats = { ...get().stats };
-    const dragon = { health: 300, attack: 300, defense: 300 };
+    const dragon = { health: 200, attack: 350, defense: 250 };
     const damageToDragon = Math.max(0, stats.attack - dragon.defense);
     const damageToPlayer = Math.max(0, dragon.attack - stats.defense);
     const newPlayerHealth = stats.health - damageToPlayer;
