@@ -33,9 +33,9 @@ const PlayerInfo = () => {
       </div>
 
       <div className="stats">
-        <p>❤️ Jon: {stats.health}</p>
-        <p>🗡️ Ataka: {stats.attack}</p>
-        <p>🛡️ Himoya: {stats.defense}</p>
+        <p>❤️ Jon:- {stats.health} </p>
+        <p>🗡️ Ataka:- {stats.attack} </p>
+        <p>🛡️ Himoya:- {stats.defense} </p>
       </div>
 
       <div className="skill-section">

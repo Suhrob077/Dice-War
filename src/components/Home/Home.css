@@ -45,8 +45,8 @@
   max-width: 300px;
   border-radius: 10px;
   border: none;
-  background-color: #0a630d8f;
-  color: rgb(255, 248, 248);
+  background-color: #f4f8f5ce;
+  color: rgb(0, 0, 0);
   outline: none;
   margin-bottom: 30px;
 }
@@ -81,8 +81,12 @@
 }
 
 .home-button {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 4px;
   background-color: #024104;
-  color: white;
+  color: rgb(49, 247, 0);
+  border: 3px green;
+  box-shadow: 0px 0px 20px green;
 }
 
 .home-button:disabled {
@@ -92,6 +96,9 @@
 
 /* 🌐 Responsivlik - Kichik ekranlar (mobil telefonlar) */
 @media (max-width: 768px) {
+  .home-container{
+    padding: 0px;
+  }
   .home-title {
     font-size: 28px;
     margin-bottom: 20px;

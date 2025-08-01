@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { useGameStore } from '../../store/useGameStore';
+import { playSound } from '../../utils/playSound';
 import './Mission.css';
 
 const Mission = ({ onClose }) => {
@@ -33,6 +34,8 @@ const Mission = ({ onClose }) => {
 
   const handleAnswer = (value) => {
     if (!mission || selected !== null) return;
+
+    playSound('button-305770.mp3'); // ✅ Tovush tugma bosilganda
 
     const isCorrect = value === mission.javob;
     setSelected(value);
@@ -68,6 +71,16 @@ const Mission = ({ onClose }) => {
   return (
     <div className="mission-overlay">
       <div className="mission-box">
+        <button
+          className="mission-infobtn"
+          onClick={() => {
+            playSound('button-305770.mp3'); // ✅ Info tugmasi uchun tovush
+            setShowInfo(!showInfo);
+          }}
+        >
+          ℹ️ Missiya haqida
+        </button>
+
         <h2>📜 Missiya</h2>
         <p className="expression">{mission.misol}</p>
 
@@ -94,10 +107,6 @@ const Mission = ({ onClose }) => {
           </p>
         )}
 
-        <button className="info-btn" onClick={() => setShowInfo(!showInfo)}>
-          ℹ️ Missiya haqida
-        </button>
-
         {showInfo && (
           <div className="mission-info-box">
             <p>
@@ -113,4 +122,3 @@ const Mission = ({ onClose }) => {
 };
 
 export default Mission;
-  

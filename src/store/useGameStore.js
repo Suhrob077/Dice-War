@@ -254,7 +254,7 @@ export const useGameStore = create((set, get) => ({
       case 'fire': get().takeDamage(10); break;
       case 'monster-snacke': get().takeDamage(20); break;
       case 'monster-tree': get().takeDamage(35); break;
-      case 'coin': get().addGold(15); break;
+      case 'coin': get().addGold(1500); break;
       case 'chest': get().addGold(60); break;
       case 'diamond': get().addGold(200); break;
       case 'weapon':

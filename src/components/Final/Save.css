@@ -24,7 +24,9 @@
     margin-top: 15px;
     gap: 10px;
   }
-  
+  ion-icon{
+    color: white;
+  }
   .save-buttons button {
     flex: 1;
     padding: 10px 15px;

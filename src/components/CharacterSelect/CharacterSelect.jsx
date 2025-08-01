@@ -15,18 +15,17 @@ const CharacterSelect = () => {
     if (selected) {
       selectCharacter(selected);
       navigate('/game');
-      playSound('../../../public/sounds/button-305770.mp3');
+      playSound('button-305770.mp3');
     }
   };
 
   const toggleInfo = (id) => {
     setShowInfoId(showInfoId === id ? null : id);
-    playSound('../../../public/sounds/button-305770.mp3');
+    playSound('button-305770.mp3');
   };
 
   return (
     <div className="select-container">
-      <h2>Qahramoningni tanla</h2>
       <div className={`card-list ${showInfoId ? 'info-open' : ''}`}>
         {charactersData.map((char) => (
           <div
@@ -34,23 +33,22 @@ const CharacterSelect = () => {
             className={`char-card ${selected === char.id ? 'selected' : ''} ${showInfoId === char.id ? 'blur' : ''}`}
             onClick={() => {
               if (selected !== char.id) {
-                playSound('../../../public/sounds/button-305770.mp3');
+                playSound('button-305770.mp3');
                 setSelected(char.id);
               }
             }}
           >
             <img src={char.image} alt={char.name} />
-            <h3>{char.name}</h3>
+            <h3 className='CHCHCH'>{char.name}</h3>
 
             {showInfoId !== char.id && (
               <button
-                className="info-btn"
+                className="chinfo-btn"
                 onClick={(e) => {
                   e.stopPropagation();
                   toggleInfo(char.id);
                 }}
-              >
-                <ion-icon name="information-circle-outline" size="large"></ion-icon>
+              >❗
               </button>
             )}
 
@@ -67,7 +65,7 @@ const CharacterSelect = () => {
                   onClick={(e) => {
                     e.stopPropagation();
                     setShowInfoId(null);
-                    playSound('../../../public/sounds/button-305770.mp3');
+                    playSound('button-305770.mp3');
                   }}
                 >
                   <ion-icon size="large" name="close-circle-outline"></ion-icon>

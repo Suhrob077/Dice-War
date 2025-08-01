@@ -5,20 +5,23 @@
     background-position: center;
     background-size: cover;
   }
-  .TG-Link-TOP-players {
-    margin-top: 12px;
-    text-align: center;
+  .telegram-avatar-link {
+    display: inline-block;
+    margin-left: 10px;
+    transition: transform 0.2s ease;
   }
   
-  .TG-Link-TOP-players a {
-    font-weight: bold;
-    font-size: 15px;
-    color: #1da1f2;
-    text-decoration: none;
+  .telegram-avatar-link:hover {
+    transform: scale(1.1);
   }
   
-  .TG-Link-TOP-players a:hover {
-    text-decoration: underline;
+  .telegram-icon-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #0088cc;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 136, 204, 0.5);
   }
   
   .player-list {
@@ -202,6 +205,15 @@
 
 
 @media (max-width:900px){
+  .telegram-icon-avatar {
+    margin-top: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #0088cc;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 136, 204, 0.5);
+  }
   .PowerUlta{
     font-size: 10px;
     position: absolute;

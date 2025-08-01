@@ -31,7 +31,7 @@
     border: none;
     outline: none;
     background-color: rgb(219, 106, 13);
-    width: 100px;
+    width: 150px;
     height: 50px;
     padding: 10px;
   }
@@ -53,7 +53,18 @@
     margin-top: 20px;
     
   }
-  
+  .save-info{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+  }
+  .eslabqol{
+    font-size: 15px;
+    color: rgb(145, 28, 28);
+    text-shadow: 0px 0px 10px rgb(255, 97, 97);
+  }
   .vs-text {
     display: flex;
     align-items: center;
@@ -83,7 +94,7 @@
     animation: pulse 1s infinite;
   }
   
-  .result {
+  .resultt {
     font-size: 36px;
     font-weight: bold;
   }

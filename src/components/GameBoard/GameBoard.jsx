@@ -63,7 +63,7 @@ const GameBoard = () => {
   useEffect(() => {
     if (isGameOver) {
       setMenuOpen(true);
-      playSound('/sounds/dragon-breathing-fire-364475.mp3');
+      playSound('dragon-breathing-fire-364475.mp3');
     }
   }, [isGameOver]);
 
@@ -76,23 +76,23 @@ const GameBoard = () => {
       switch (tile.type) {
         case 'coin':
         case 'chest':
-          playSound('../../../public/sounds/badge-coin-win-14675.mp3');
+          playSound('badge-coin-win-14675.mp3');
           break;
         case 'monster-snacke':
         case 'monster-tree':
-          playSound('../../../public/sounds/mouse-click-6-381778.mp3');
+          playSound('mouse-click-6-381778.mp3');
           break;
         case 'weapon':
-          playSound('../../../public/sounds/sword-slash-with-metallic-impact-185435.mp3');
+          playSound('sword-slash-with-metallic-impact-185435.mp3');
           break;
         case 'defense':
-          playSound('../../../public/sounds/shield-guard-6963.mp3');
+          playSound('shield-guard-6963.mp3');
           break;
         case 'diamond':
-          playSound('../../../public/sounds/correct-356013.mp3');
+          playSound('correct-356013.mp3');
           break;
         case 'mission':
-          playSound('../../../public/sounds/correct-356013.mp3');
+          playSound('correct-356013.mp3');
           setShowMission(true);
           break;
         default:
@@ -110,7 +110,7 @@ const GameBoard = () => {
   useEffect(() => {
     if (position === 99) {
       navigate('/final');
-      playSound('../../../public/sounds/dragon-breathing-fire-364475.mp3');
+      playSound('dragon-breathing-fire-364475.mp3');
     }
   }, [position]);
 
@@ -119,13 +119,13 @@ const GameBoard = () => {
   };
 
   const togglePanel = (panel) => {
-    playSound('../../../public/sounds/button-305770.mp3');
+    playSound('button-305770.mp3');
     setActivePanel((prev) => (prev === panel ? null : panel));
   };
 
   const handleMenuClick = () => {
     setMenuOpen(true);
-    playSound('../../../public/sounds/button-305770.mp3');
+    playSound('button-305770.mp3');
   };
 
   const handleMenuAction = (action) => {
@@ -186,14 +186,14 @@ const GameBoard = () => {
           {activePanel === 'shop' && (
             <Shop onClose={() => {
               setActivePanel(null);
-              playSound('../../../public/sounds/button-305770.mp3');
+              playSound('button-305770.mp3');
             }} />
           )}
 
           {activePanel === 'inventory' && (
             <Inventory onClose={() => {
               setActivePanel(null);
-              playSound('../../../public/sounds/button-305770.mp3');
+              playSound('button-305770.mp3');
             }} />
           )}
 

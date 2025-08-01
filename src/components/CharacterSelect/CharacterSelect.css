@@ -50,18 +50,20 @@
 }
 
 /* Info button */
-.info-btn {
+.chinfo-btn {
+  width: 30px;
+  height: 30px;
   position: absolute;
-  top: 10px;
-  right: 10px;
-  background: #024d8a;
-  color: white;
-  border: none;
-  border-radius: 90px 90px 90px 0px;
-  padding: 5px 10px;
-  cursor: pointer;
-  font-size: 14px;
-  z-index: 2;
+  border-radius: 50px;
+  top: 0px;
+  right: -5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0c1a25;
+}
+.CHCHCH{
+  color: #f6faf6;
 }
 
 .char-info {
@@ -145,7 +147,7 @@
 
   .char-card {
     width: 120px;
-    height: 180px;
+    height: 200px;
     padding: 8px;
   }
 

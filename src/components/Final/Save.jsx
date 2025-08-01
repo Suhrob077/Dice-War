@@ -1,6 +1,7 @@
 // src/components/Save.jsx
 import React, { useState } from 'react';
 import { supabase } from '../../lib/supabaseClient';
+import { playSound } from '../../utils/playSound';
 import './Save.css';
 
 const Save = ({ playerStats }) => {
@@ -16,6 +17,7 @@ const Save = ({ playerStats }) => {
   const inputsAreValid = username.trim() !== '' && password.trim() !== '' && isTelegramValid;
 
   const togglePasswordVisibility = () => {
+    playSound('interface-124464.mp3');
     setShowPassword(!showPassword);
   };
 
@@ -33,6 +35,7 @@ const Save = ({ playerStats }) => {
     }
 
     if (existingUser) {
+      playSound('mouse-click-6-381778.mp3');
       setMessage('❌ Bu ism allaqachon mavjud!');
       return;
     }
@@ -50,8 +53,11 @@ const Save = ({ playerStats }) => {
     if (error) {
       console.error("📦 playerStats:", playerStats);
       console.error("❌ Supabase Error (INSERT):", error);
+      playSound('mouse-click-6-381778.mp3');
       setMessage('❌ Saqlashda xatolik!');
     } else {
+      playSound('correct-356013.mp3');
+      alert('✅ Maʼlumot muvaffaqiyatli saqlandi!');
       setMessage('✅ Saqlandi!');
       resetForm();
     }
@@ -67,16 +73,20 @@ const Save = ({ playerStats }) => {
       .single();
 
     if (error) {
+      playSound('mouse-click-6-381778.mp3');
       console.error("❌ Supabase Error (CHECK):", error);
       setMessage('❌ Foydalanuvchini tekshirishda xatolik - iltimos aloqani tekshiring!');
       return;
     }
 
     if (!data) {
+      playSound('mouse-click-6-381778.mp3');
       setMessage('❌ Bu foydalanuvchi topilmadi!');
     } else if (data.password !== password) {
+      playSound('mouse-click-6-381778.mp3');
       setMessage('❌ Noto‘g‘ri parol!');
     } else {
+      playSound('correct-356013.mp3');
       setShowUpdateButton(true);
       setMessage('✅ Tekshiruv o‘tildi, yangilash mumkin!');
     }
@@ -95,9 +105,12 @@ const Save = ({ playerStats }) => {
       .eq('username', username);
 
     if (error) {
+      playSound('mouse-click-6-381778.mp3');
       console.error("❌ Supabase Error (UPDATE):", error);
       setMessage('❌ Internetngizni tekshiring!');
     } else {
+      playSound('correct-356013.mp3');
+      alert('✅ Yangilash muvaffaqiyatli amalga oshirildi!');
       setMessage('✅ Maʼlumotlar yangilandi!');
       resetForm();
     }
@@ -117,8 +130,8 @@ const Save = ({ playerStats }) => {
     <div className="save-panel">
       {!mode && (
         <div className="save-buttons">
-          <button onClick={() => setMode('save')}>🆕 Yangi saqlash</button>
-          <button onClick={() => setMode('update')}>🔄 Yangilash</button>
+          <button onClick={() => { playSound('click'); setMode('save'); }}>🆕 Yangi saqlash</button>
+          <button onClick={() => { playSound('click'); setMode('update'); }}>🔄 Yangilash</button>
         </div>
       )}
 
@@ -150,12 +163,12 @@ const Save = ({ playerStats }) => {
             onChange={(e) => setTelegram(e.target.value)}
           />
           {telegram && !isTelegramValid && (
-            <p className="message error-msg">❌ Telegram manzili noto‘g‘ri! Masalan: @username</p>
+            <p className="message error-msg">❌ @-bilan boshlanagan (4) dan yuqori harfdan iborat bulsin!</p>
           )}
 
           {mode === 'save' && (
             <button
-              onClick={handleSave}
+              onClick={() => { playSound('click'); handleSave(); }}
               disabled={!inputsAreValid}
               className={!inputsAreValid ? 'disabled' : ''}
             >
@@ -165,7 +178,7 @@ const Save = ({ playerStats }) => {
 
           {mode === 'update' && !showUpdateButton && (
             <button
-              onClick={handleCheckAndEnableUpdate}
+              onClick={() => { playSound('click'); handleCheckAndEnableUpdate(); }}
               disabled={!inputsAreValid}
               className={!inputsAreValid ? 'disabled' : ''}
             >
@@ -174,10 +187,12 @@ const Save = ({ playerStats }) => {
           )}
 
           {mode === 'update' && showUpdateButton && (
-            <button onClick={handleUpdate}>✅ Yangilash</button>
+            <button onClick={() => { playSound('click'); handleUpdate(); }}>
+              ✅ Yangilash
+            </button>
           )}
 
-          <button onClick={resetForm}>❌ Bekor qilish</button>
+          <button onClick={() => { playSound('click'); resetForm(); }}>❌ Bekor qilish</button>
 
           {message && <p className="message">{message}</p>}
         </div>

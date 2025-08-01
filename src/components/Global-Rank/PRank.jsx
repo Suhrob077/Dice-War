@@ -183,6 +183,21 @@ const Prank = () => {
               <p className='PR-Hp'>❤️ Health: {(searchResult || selectedPlayer).health}</p>
               <p className='PR-Def'>🛡️ Defense: {(searchResult || selectedPlayer).defense}</p>
               <p className='PR-Attack'>🗡️ Attack: {(searchResult || selectedPlayer).attack}</p>
+              {(searchResult || selectedPlayer)?.telegram && (
+    <a
+      href={`https://t.me/${(searchResult || selectedPlayer).telegram.replace('@', '')}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="telegram-avatar-link"
+    >
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png"
+        alt="Telegram"
+        className="telegram-icon-avatar"
+        title="Telegram orqali bog‘lanish"
+      />
+    </a>
+  )}
             </div>
             {getRankIcon(players.indexOf(selectedPlayer)) && !searchResult && (
               <img className='noneimg' src={getRankIcon(players.indexOf(selectedPlayer))} alt="" />
@@ -198,13 +213,6 @@ const Prank = () => {
             {/* ✅ Telegram Link */}
             {(searchResult || selectedPlayer)?.telegram && (
               <div className="TG-Link-TOP-players">
-                <a
-                  href={`https://t.me/${(searchResult || selectedPlayer).telegram.replace('@', '')}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  📲 Telegram: {(searchResult || selectedPlayer).telegram}
-                </a>
               </div>
             )}
           </div>

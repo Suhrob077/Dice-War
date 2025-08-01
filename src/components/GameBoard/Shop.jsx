@@ -27,13 +27,13 @@ const Shop = ({ onClose }) => {
 
   const handlePurchase = (item, disabled) => {
     if (!disabled && gold >= item.price) {
-      playSound('../../../public/sounds/coin-recieved-230517.mp3');
+      playSound('coin-recieved-230517.mp3');
       buyItem(item);
     }
   };
 
   const handleExit = () => {
-    playSound('../../../public/sounds/button-305770.mp3');
+    playSound('button-305770.mp3');
     onClose?.(); // mavjud bo‘lsa chaqiriladi
   };
 

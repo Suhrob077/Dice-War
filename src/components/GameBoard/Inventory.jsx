@@ -14,7 +14,7 @@ const Inventory = ({ onClose }) => {
   const [diceValue, setDiceValue] = useState('');
 
   const handleItemClick = (item) => {
-    playSound('../../../public/sounds/interface-124464.mp3'); // Ovoz item tanlanganda
+    playSound('interface-124464.mp3'); // Ovoz item tanlanganda
     setSelectedItem(item);
     setShowDiceInput(item.name.toLowerCase().includes('dice'));
   };
@@ -22,7 +22,7 @@ const Inventory = ({ onClose }) => {
   const handleActivate = () => {
     if (!selectedItem) return;
 
-    playSound('../../../public/sounds/interface-124464.mp3'); // Faollashtirishda ovoz
+    playSound('interface-124464.mp3'); // Faollashtirishda ovoz
 
     if (!selectedItem.name.toLowerCase().includes('dice')) {
       useItem(selectedItem);
@@ -49,7 +49,7 @@ const Inventory = ({ onClose }) => {
       return;
     }
 
-    playSound('../../../public/sounds/interface-124464.mp3'); // Yurish tugmasi bosilganda
+    playSound('interface-124464.mp3'); // Yurish tugmasi bosilganda
 
     if (selectedItem.name.includes('Black Dice')) {
       movePlayer(-number);
@@ -69,7 +69,7 @@ const Inventory = ({ onClose }) => {
       <div className='Inventorymenu'>
         <h2>🎒 Inventar</h2>
         <button className='exit-inventor' onClick={()=>{
-          playSound('../../../public/sounds/interface-124464.mp3');
+          playSound('interface-124464.mp3');
           onClose();
           }}>
             Exit
@@ -84,14 +84,13 @@ const Inventory = ({ onClose }) => {
             onClick={() => handleItemClick(item)}
           >
             <img className="Item-images" src={item.image} alt={item.name} />
-            <p>{item.name}</p>
           </div>
         ))}
       </div>
 
       {selectedItem && (
         <div className="inventory-actions">
-          <p>Tanlangan: {selectedItem.name}</p>
+          <p className='tanlandi'>Tanlangan: {selectedItem.name}</p>
           {!showDiceInput && (
             <button onClick={handleActivate}>Faollashtirish</button>
           )}

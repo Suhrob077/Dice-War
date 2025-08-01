@@ -21,7 +21,7 @@ const DiceRoller = ({ onRoll }) => {
   const rollDice = () => {
     setRolling(true);
     setFinalIndex(null);
-    playSound('../../../public/sounds/pebble-spin-001-89320.mp3')
+    playSound('pebble-spin-001-89320.mp3')
     const randomIndex = Math.floor(Math.random() * 6); // 0 to 5
     let interval = 100;
     let totalTime = 3000;

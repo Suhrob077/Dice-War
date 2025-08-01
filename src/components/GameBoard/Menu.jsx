@@ -7,7 +7,7 @@ const Menu = ({ onAction, gameOver }) => {
   const stats = useGameStore(state => state.stats);
 
   const handleClick = (actionType) => {
-    playSound('../../../public/sounds/button-305770.mp3'); // bu yerda 'click' — bu tovush fayl nomi yoki identifikatori
+    playSound('button-305770.mp3'); // bu yerda 'click' — bu tovush fayl nomi yoki identifikatori
     onAction(actionType);
   };
 

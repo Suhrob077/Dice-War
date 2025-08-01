@@ -16,18 +16,22 @@
   scrollbar-color: #888 transparent;
 }
 .Inventorymenu{
+  background-color: #2e2e33;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  border-radius: 20px;
 }
 .exit-inventor{
+  width: 100px;
   padding: 10px 15px;
   border-radius: 20px;
   background-color: red;
   outline: none;
   color: white;
   font-size: 20px;
-  border: none;
+  box-shadow: 0px 0px 20px red;
+  border: 2px solid red;
 }
 .inventory-grid {
   display: grid;
@@ -57,19 +61,27 @@
 .Item-images{
   width: 50px;
 }
+.tanlandi{
+  font-size: 20px;
+  color: rgb(251, 255, 0);
+  text-shadow: 0px 0px 10px yellow ;
+}
 
 @media (max-width:900px){
   .inventory{
     width: 700px;
+    height: 100vh;
     left: 0px;
     top: 0px;
+    border-radius: 0px;
+    background-color: #28283da2;
   }
   .inventory-item{
     width: 80px;
     height: 80px;
   }
   .Item-images{
-    width: 30px;
+    width: 100%;
   }
   .dice-input{
     display: flex;
