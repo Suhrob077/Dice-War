@@ -34,7 +34,7 @@ const App = () => {
   if (!animationFinished) {
     return (
       <div className="animation-screen">
-        <h1 className="fade-in">🎮 O‘yin yuklanmoqda...</h1>
+        <h1 className="fade-in">🎲 Dice - War ⚔</h1>
       </div>
     );
   }
