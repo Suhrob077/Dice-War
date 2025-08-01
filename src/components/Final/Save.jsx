@@ -7,11 +7,13 @@ const Save = ({ playerStats }) => {
   const [mode, setMode] = useState(null);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [showPassword, setShowPassword] = useState(false); // 👈 Parolni ko‘rsatish holati
+  const [telegram, setTelegram] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
   const [message, setMessage] = useState('');
   const [showUpdateButton, setShowUpdateButton] = useState(false);
 
-  const inputsAreValid = username.trim() !== '' && password.trim() !== '';
+  const isTelegramValid = telegram.trim() === '' || /^@[a-zA-Z0-9_]{5,32}$/.test(telegram);
+  const inputsAreValid = username.trim() !== '' && password.trim() !== '' && isTelegramValid;
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -38,6 +40,7 @@ const Save = ({ playerStats }) => {
     const { error } = await supabase.from('players').insert([{
       username,
       password,
+      telegram,
       character: playerStats.character,
       health: playerStats.health,
       attack: playerStats.attack,
@@ -87,6 +90,7 @@ const Save = ({ playerStats }) => {
         health: playerStats.health,
         attack: playerStats.attack,
         defense: playerStats.defense,
+        telegram,
       })
       .eq('username', username);
 
@@ -103,6 +107,7 @@ const Save = ({ playerStats }) => {
     setMode(null);
     setUsername('');
     setPassword('');
+    setTelegram('');
     setMessage('');
     setShowUpdateButton(false);
     setShowPassword(false);
@@ -125,7 +130,7 @@ const Save = ({ playerStats }) => {
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
-          
+
           <div className="password-field">
             <input
               type={showPassword ? 'text' : 'password'}
@@ -137,6 +142,16 @@ const Save = ({ playerStats }) => {
               <ion-icon name={showPassword ? "eye-off-outline" : "eye-outline"}></ion-icon>
             </span>
           </div>
+
+          <input
+            type="text"
+            placeholder="Telegram manzilingiz (masalan: @nickname)"
+            value={telegram}
+            onChange={(e) => setTelegram(e.target.value)}
+          />
+          {telegram && !isTelegramValid && (
+            <p className="message error-msg">❌ Telegram manzili noto‘g‘ri! Masalan: @username</p>
+          )}
 
           {mode === 'save' && (
             <button

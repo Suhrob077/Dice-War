@@ -11,7 +11,7 @@ import logo3 from './Decorations/Bronze1.png';
 import top1 from './Decorations/top1.png';
 import top2 from './Decorations/top2.png';
 import top3 from './Decorations/top3.png';
-import backgroundMusic from '../../../public/sounds/ambient-soundscapes-004-space-atmosphere-303243.mp3'; // ⬅️ Musiqa faylini import qilamiz
+import backgroundMusic from '../../../public/sounds/ambient-soundscapes-004-space-atmosphere-303243.mp3';
 
 const Prank = () => {
   const [players, setPlayers] = useState([]);
@@ -24,12 +24,12 @@ const Prank = () => {
   const [searchResult, setSearchResult] = useState(null);
   const [searchError, setSearchError] = useState('');
   const navigate = useNavigate();
-  const audioRef = useRef(null); // 🎵 Audio saqlovchi
+  const audioRef = useRef(null);
 
   const fetchAndSortPlayers = async () => {
     const { data, error } = await supabase
       .from('players')
-      .select('id, username, password, health, attack, defense');
+      .select('id, username, password, health, attack, defense, telegram');
 
     if (!error) {
       const ranked = data.map((p) => ({
@@ -50,7 +50,6 @@ const Prank = () => {
   };
 
   useEffect(() => {
-    // 🎵 Musiqa boshlanishi
     audioRef.current = new Audio(backgroundMusic);
     audioRef.current.loop = true;
     audioRef.current.volume = 0.5;
@@ -71,7 +70,6 @@ const Prank = () => {
     }, 1000);
 
     return () => {
-      // 🎵 Musiqa to‘xtatish va reset
       if (audioRef.current) {
         audioRef.current.pause();
         audioRef.current.currentTime = 0;
@@ -88,7 +86,7 @@ const Prank = () => {
     setSearchError('');
     supabase
       .from('players')
-      .select('username, password, health, attack, defense')
+      .select('username, password, health, attack, defense, telegram')
       .then(({ data }) => {
         const found = data.find(p => p.username === searchName);
         if (!found) {
@@ -171,6 +169,7 @@ const Prank = () => {
           )}
         </div>
       </div>
+
       <div className="player-details">
         {(selectedPlayer || searchResult) && (
           <div className={`details-card`}>
@@ -195,6 +194,19 @@ const Prank = () => {
               <p className='PR-Power'>{Math.round((searchResult || selectedPlayer).powerScore)}</p>
               {searchResult && <p className='PR-Rank'>🏅 Urningiz: #{searchResult.rank}</p>}
             </div>
+
+            {/* ✅ Telegram Link */}
+            {(searchResult || selectedPlayer)?.telegram && (
+              <div className="TG-Link-TOP-players">
+                <a
+                  href={`https://t.me/${(searchResult || selectedPlayer).telegram.replace('@', '')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  📲 Telegram: {(searchResult || selectedPlayer).telegram}
+                </a>
+              </div>
+            )}
           </div>
         )}
       </div>

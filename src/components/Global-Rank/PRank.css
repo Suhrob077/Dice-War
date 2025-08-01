@@ -5,6 +5,21 @@
     background-position: center;
     background-size: cover;
   }
+  .TG-Link-TOP-players {
+    margin-top: 12px;
+    text-align: center;
+  }
+  
+  .TG-Link-TOP-players a {
+    font-weight: bold;
+    font-size: 15px;
+    color: #1da1f2;
+    text-decoration: none;
+  }
+  
+  .TG-Link-TOP-players a:hover {
+    text-decoration: underline;
+  }
   
   .player-list {
     width: 35%;
