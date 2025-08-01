@@ -16,7 +16,7 @@ const Mission = ({ onClose }) => {
   useEffect(() => {
     const loadMission = async () => {
       try {
-        const res = await fetch('../../../public/Data/MIssions.json');
+        const res = await fetch('/Data/missions.json');
         const data = await res.json();
         const randomMission = data[Math.floor(Math.random() * data.length)];
         setMission(randomMission);
