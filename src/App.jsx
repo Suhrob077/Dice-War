@@ -7,7 +7,7 @@ import Final from './components/Final/Final';
 import Prank from './components/Global-Rank/PRank';
 import About from './components/Home/Abought';
 import { Analytics } from '@vercel/analytics/react'; // ✅ Qo‘shildi
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import './App.css';
 
 const App = () => {
