@@ -6,6 +6,7 @@ import GameBoard from './components/GameBoard/GameBoard';
 import Final from './components/Final/Final';
 import Prank from './components/Global-Rank/PRank';
 import About from './components/Home/Abought';
+import { Analytics } from '@vercel/analytics/react'; // ✅ Qo‘shildi
 import './App.css';
 
 const App = () => {
@@ -22,7 +23,7 @@ const App = () => {
     window.addEventListener('orientationchange', checkOrientation);
     window.addEventListener('resize', checkOrientation);
 
-    const timer = setTimeout(() => setAnimationFinished(true), 3000); // 3s animatsiya
+    const timer = setTimeout(() => setAnimationFinished(true), 3000);
 
     return () => {
       window.removeEventListener('orientationchange', checkOrientation);
@@ -55,8 +56,9 @@ const App = () => {
         <Route path="/game" element={<GameBoard />} />
         <Route path="/final" element={<Final />} />
         <Route path="/top-player" element={<Prank />} />
-        <Route path="/abought" element={<About/>}/>
+        <Route path="/abought" element={<About />} />
       </Routes>
+      <Analytics /> {/* ✅ Bu yerga qo‘shildi */}
     </Router>
   );
 };
