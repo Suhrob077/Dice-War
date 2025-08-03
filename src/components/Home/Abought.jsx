@@ -11,7 +11,7 @@ const Abought = () => {
         <h2>1. O‘yin mazmuni</h2>
         <p>
           Dice War — bu zarlar orqali jang qilinadigan strategik o‘yin. Har bir
-          o‘yinchi o‘z qahramonini tanlaydi va kuch, himoya, yashas kabi
+          o‘yinchi o‘z qahramonini tanlaydi va kuch, himoya, yashash kabi
           ko‘rsatkichlarni oshirib, dushmanlarnini yengishga harakat qiladi.
         </p>
         {/* <img src="/images/gameplay.png" alt="Game overview" /> */}
@@ -21,7 +21,7 @@ const Abought = () => {
         <h2>2. Nimalar qilish mumkin?</h2>
         <ul>
           <li>Qahramonni tanlash va uni rivojlantirish</li>
-          <li>Skil (ko‘nikma) larni ochish va ishlatish</li>
+          <li>Qobiliyat (ko‘nikma) larni ochish va ishlatish</li>
           <li>Ajdar bilan jang!</li>
         </ul>
         {/* <img src="/images/skills.png" alt="Skills preview" /> */}
@@ -37,7 +37,7 @@ const Abought = () => {
       </section>
 
       <section>
-        <h2>4. Finalda nimalar bo‘ladi?</h2>
+        <h2>4. Final-da nimalar bo‘ladi?</h2>
         <li>
           Fnal - Player 99-katakga yetib borishi bilan - final qisimga utadi !
         </li>
@@ -50,13 +50,16 @@ const Abought = () => {
       <section>
         <h2>5. Rank ma’lumotlarini qanday Saqlash va Yanglash?</h2>
         <p>
-          Player- Uynda g`alaba qozonsa yani ajdarni yengsa uz statuslarnini saqlashi lozim ! 
+          Player- O’ynda g`alaba qozonsa yani ajdarni yengsa O’z statuslarnini saqlashi lozim ! 
         </p>
         <li>
           Statusni Saqlashda Player-ism va parol quyishi lozim va saqlash tugmasi orqali malumotlarni saqlaydi !
         </li>
         <li>
-          Statusni yangilash orqali oldingi statuslaringizni yuqori darajaga olib utasiz 
+          Shuningdek Telegram manzilini ham kiritishi lozim !!!
+        </li>
+        <li>
+          Statusni yangilash orqali oldingi statuslaringizni yuqori darajaga olib O’tasiz 
         </li>
         {/* <img src="/images/rank_data.png" alt="Rank data" /> */}
       </section>
@@ -67,10 +70,10 @@ const Abought = () => {
           Rank - Hujum , Himoya , Hayot statuslari jamlanib POWER-ga aylantiriladi !
         </p>
         <li>
-          Power darajasi yuqori 10 ta payer asosiy sahifada kursatiladi !
+          Power darajasi yuqori 10 ta palyer asosiy sahifada ko’rsatiladi !
         </li>
         <li>
-          Yoki siz 10 talikda bulmasangiz qidiruv orqali us darajangizni bilib olasiz!
+          Yoki siz 10 talikda bulmasangiz qidiruv orqali O’z darajangizni bilib olasiz!
         </li>
         {/* <img src="/images/rank_progression.png" alt="Rank stages" /> */}
       </section>
@@ -79,9 +82,9 @@ const Abought = () => {
         <h2>7. Eslatmalar</h2>
         <ul>
           <li>shopdan 1 turdagi artifactdan 2 ta sotib olmang ❗❗❗</li>
-          <p>avval sotib olinganni ishlating so`ng yana sotib oling 🎁</p>
+          <p>avval sotib olinganini ishlating so`ng yana sotib oling 🎁</p>
           <li>Zar natijalari tasodifiy hisoblanadi (randomize)</li>
-          <li>Skil va itemlar balanslangan holda ishlab chiqilgan</li>
+          <li>Qobiliyat va artifactlar balanslangan holda ishlab chiqilgan</li>
           <li>Tuzalish Artifactini sotib olgandan sung ishlatmang ! (artifact (inventorda turgan vaqti) har yurganda +10 hp beradi .Ammo-uni ishlatish  +40 hp beradi !)</li>
         </ul>
         {/* <img src="/images/tips.png" alt="Tips" /> */}
@@ -90,7 +93,7 @@ const Abought = () => {
       <section>
       <h2>❗❗❗ Muuhum Eslatma ❗❗❗ </h2>
       <p>
-        Shop orqali sotib olingan bir turdagi narsalar ni ishlatish bittasining statuslarini beradi !
+        Shop orqali sotib olingan bir turdagi narsalarni ishlatish bittasining statuslarini beradi !
       </p>
       <h2>
         Bu xato emas bu yangilik --- Misol uchun:
@@ -103,7 +106,7 @@ const Abought = () => {
         Bunda barcha qilichlar belgilanda(avto) va faollashtirish bosiladi
       </li>
       <li>
-        Falollashtirilgandan so`ng 3ta qilich uyinchiga 10+10+10=30 statu bermaydi 
+        Falollashtirilgandan so`ng 3ta qilich o’yinchiga 10+10+10=30 status bermaydi 
       </li>
       <li>faqat bittasiing satuslari qushiladi (+10), qolgan 2 ta qilich esa avto ishlatilgan deb topilib inventordan uchadi ! </li>
       <h2>Bu usul Player hushyorligini oshirish va ketma-ketlik ni buzmaslik uchun uylab topilgan ❗❗❗</h2>
@@ -112,8 +115,8 @@ const Abought = () => {
       <section>
         <h2>8. Keyingi yangilanishlar</h2>
         <p>
-          Kelajakdagi yangilanishlar: yangi qahramonlar, yangi skilllar, PvP
-          ligasi va hodisalar (events).
+          Kelajakdagi yangilanishlar: yangi qahramonlar, yangi Qobiliyatlar, PvP, yangi Artifactlar +20,
+           va hodisalar (events).
         </p>
         <li>
           2 player rejimi 📲📲
