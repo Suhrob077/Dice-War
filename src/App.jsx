@@ -7,6 +7,7 @@ import Final from './components/Final/Final';
 import Prank from './components/Global-Rank/PRank';
 import About from './components/Home/Abought';
 import { Analytics } from '@vercel/analytics/react'; // ✅ Qo‘shildi
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import './App.css';
 
 const App = () => {
@@ -59,6 +60,7 @@ const App = () => {
         <Route path="/abought" element={<About />} />
       </Routes>
       <Analytics /> {/* ✅ Bu yerga qo‘shildi */}
+      <SpeedInsights/> 
     </Router>
   );
 };
